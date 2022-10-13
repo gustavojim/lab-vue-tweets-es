@@ -6,18 +6,15 @@
         <ProfileImage :src="props.tweet.user.image"></ProfileImage>
         
         <div class="body">
-
             <div class="top">
-                <User :users="props.tweet.user.name" :handle="props.tweet.user.handle"></User> 
-            </div>
 
-        <!-- Creo en enlace a User -->
+        <!-- Creo en enlace a User y TimeStamp -->
 
-
-
-        <!-- Creo en enlace a TimeStamp -->
-
-            <TimeStamp></TimeStamp>
+            <User :users="props.tweet.user.name" :handle="props.tweet.user.handle"></User>
+            <TiempoPublicacion :timestamp="props.tweet.timestamp"></TiempoPublicacion> 
+          
+        </div>
+        
 
         <!-- Creo en enlace a Message -->
 
@@ -72,7 +69,7 @@ a {
     import ProfileImage from './ProfileImage.vue';
     import Actions from './Actions.vue';
     import Message from './Message.vue';
-    import TimeStamp from './TimeStamp.vue';
+    import TiempoPublicacion from './TiempoPublicacion.vue'
     import User from './User.vue';
     const props = defineProps(['tweet']);
 

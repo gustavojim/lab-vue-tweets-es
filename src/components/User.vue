@@ -1,6 +1,6 @@
 <template>
 
-    <span class='user'>
+    <span>
 <!-- LLamar a los datos de la matriz en app.vue -->
         <span class="name">{{props.users}}</span>
         <span class="span">{{props.handle}}</span>
