@@ -6,20 +6,19 @@
         <ProfileImage :src="props.tweet.user.image"></ProfileImage>
         
         <div class="body">
+
             <div class="top">
-                <i class="fas fa-ellipsis-h"></i>
+                <User :users="props.tweet.user.name" :handle="props.tweet.user.handle"></User> 
             </div>
 
         <!-- Creo en enlace a User -->
 
-            <User></User>
+
 
         <!-- Creo en enlace a TimeStamp -->
 
             <TimeStamp></TimeStamp>
 
-        
-        
         <!-- Creo en enlace a Message -->
 
             <Message :mensaje="props.tweet.message"></Message>
@@ -28,6 +27,7 @@
 
         <Actions></Actions>
         </div>
+        <i class="fas fa-ellipsis-h"></i>
     </div>
 
 
@@ -65,7 +65,7 @@ a {
 }
 </style>
 
-<!-- Impoto todas las props de los componentes -->
+<!-- Importo todas las props de los componentes -->
 
 <script setup>
     import { defineProps } from 'vue';
@@ -73,6 +73,7 @@ a {
     import Actions from './Actions.vue';
     import Message from './Message.vue';
     import TimeStamp from './TimeStamp.vue';
+    import User from './User.vue';
     const props = defineProps(['tweet']);
 
 </script>

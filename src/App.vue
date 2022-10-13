@@ -1,5 +1,8 @@
 <template>
     <div class="app">
+
+<!-- Crear el v-for para recorrer la matriz -->
+
         <Tweet v-for="post in tweets" :tweet="post" />
     </div>
 </template>
